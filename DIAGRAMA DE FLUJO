@@ -1,0 +1,739 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="flujo-principal" name="Flujo Principal">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- INICIO -->
+        <mxCell id="inicio" value="INICIO" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="354" y="40" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Mostrar Menú -->
+        <mxCell id="menu" value="Mostrar Menú Principal" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="334" y="140" width="160" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Leer opción -->
+        <mxCell id="leer-op" value="Leer opción del usuario" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="324" y="240" width="180" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Decisión opción válida -->
+        <mxCell id="decision-valida" value="¿Opción válida&#xa;(1-6)?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="339" y="340" width="150" height="100" as="geometry"/>
+        </mxCell>
+        
+        <!-- Error opción inválida -->
+        <mxCell id="error-op" value="Mostrar mensaje&#xa;de error" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="554" y="360" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Switch opciones -->
+        <mxCell id="switch" value="Evaluar&#xa;switch(opción)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="339" y="490" width="150" height="100" as="geometry"/>
+        </mxCell>
+        
+        <!-- Opción 1: Ingresar -->
+        <mxCell id="op1" value="1: Ingresar&#xa;Producto" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="80" y="650" width="100" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Opción 2: Editar -->
+        <mxCell id="op2" value="2: Editar&#xa;Producto" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="200" y="650" width="100" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Opción 3: Eliminar -->
+        <mxCell id="op3" value="3: Eliminar&#xa;Producto" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="320" y="650" width="100" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Opción 4: Calcular -->
+        <mxCell id="op4" value="4: Calcular&#xa;Producción" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="440" y="650" width="100" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Opción 5: Mostrar -->
+        <mxCell id="op5" value="5: Mostrar&#xa;Productos" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="560" y="650" width="100" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Opción 6: Salir -->
+        <mxCell id="op6" value="6: Salir" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="680" y="650" width="100" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Esperar confirmación -->
+        <mxCell id="esperar" value="Esperar confirmación&#xa;del usuario" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="334" y="750" width="160" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- FIN -->
+        <mxCell id="fin" value="FIN" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="670" y="750" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Conectores -->
+        <mxCell id="c1" edge="1" parent="1" source="inicio" target="menu">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c2" edge="1" parent="1" source="menu" target="leer-op">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c3" edge="1" parent="1" source="leer-op" target="decision-valida">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c4" value="NO" edge="1" parent="1" source="decision-valida" target="error-op">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c5" edge="1" parent="1" source="error-op" target="menu">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="614" y="170"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c6" value="SÍ" edge="1" parent="1" source="decision-valida" target="switch">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c7" edge="1" parent="1" source="switch" target="op1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c8" edge="1" parent="1" source="switch" target="op2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c9" edge="1" parent="1" source="switch" target="op3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c10" edge="1" parent="1" source="switch" target="op4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c11" edge="1" parent="1" source="switch" target="op5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c12" edge="1" parent="1" source="switch" target="op6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c13" edge="1" parent="1" source="op1" target="esperar">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c14" edge="1" parent="1" source="op2" target="esperar">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c15" edge="1" parent="1" source="op3" target="esperar">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c16" edge="1" parent="1" source="op4" target="esperar">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c17" edge="1" parent="1" source="op5" target="esperar">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c18" edge="1" parent="1" source="op6" target="fin">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c19" edge="1" parent="1" source="esperar" target="menu">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="210" y="780"/>
+              <mxPoint x="210" y="170"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+  
+  <diagram id="flujo-ingresar" name="Ingresar Producto">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- INICIO Ingresar -->
+        <mxCell id="ini-ing" value="INICIO&#xa;ingresarProducto()" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="334" y="40" width="160" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Verificar límite -->
+        <mxCell id="dec-limite" value="¿totalProductos&#xa;&lt; MAX?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="339" y="140" width="150" height="100" as="geometry"/>
+        </mxCell>
+        
+        <!-- Mensaje límite -->
+        <mxCell id="msg-limite" value="Mensaje:&#xa;Límite alcanzado" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="554" y="160" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Retornar límite -->
+        <mxCell id="ret-limite" value="RETORNAR" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="554" y="260" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Pedir nombre -->
+        <mxCell id="pedir-nom" value="Solicitar nombre&#xa;del producto" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="324" y="280" width="180" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Validar nombre -->
+        <mxCell id="val-nom" value="Validar nombre" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="344" y="380" width="140" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Decisión tiene números -->
+        <mxCell id="dec-num" value="¿Tiene&#xa;números?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="339" y="470" width="150" height="100" as="geometry"/>
+        </mxCell>
+        
+        <!-- Error nombre -->
+        <mxCell id="err-nom" value="ERROR:&#xa;No puede contener&#xa;números" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="554" y="485" width="120" height="70" as="geometry"/>
+        </mxCell>
+        
+        <!-- Pedir cantidad -->
+        <mxCell id="pedir-cant" value="Solicitar cantidad&#xa;demandada" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="324" y="610" width="180" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Decisión cantidad válida -->
+        <mxCell id="dec-cant" value="¿cantidad&#xa;&gt;= 0?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="339" y="710" width="150" height="100" as="geometry"/>
+        </mxCell>
+        
+        <!-- Error cantidad -->
+        <mxCell id="err-cant" value="ERROR:&#xa;Cantidad no puede&#xa;ser negativa" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="554" y="725" width="120" height="70" as="geometry"/>
+        </mxCell>
+        
+        <!-- Pedir tiempo -->
+        <mxCell id="pedir-tiempo" value="Solicitar tiempo&#xa;unitario (horas)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="324" y="850" width="180" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Decisión tiempo válido -->
+        <mxCell id="dec-tiempo" value="¿tiempo&#xa;&gt;= 0?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="339" y="950" width="150" height="100" as="geometry"/>
+        </mxCell>
+        
+        <!-- Error tiempo -->
+        <mxCell id="err-tiempo" value="ERROR:&#xa;Tiempo no puede&#xa;ser negativo" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="554" y="965" width="120" height="70" as="geometry"/>
+        </mxCell>
+        
+        <!-- Pedir recursos -->
+        <mxCell id="pedir-rec" value="Solicitar recursos&#xa;unitarios" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="324" y="1090" width="180" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Decisión recursos válidos -->
+        <mxCell id="dec-rec" value="¿recursos&#xa;&gt;= 0?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="339" y="1190" width="150" height="100" as="geometry"/>
+        </mxCell>
+        
+        <!-- Error recursos -->
+        <mxCell id="err-rec" value="ERROR:&#xa;Recursos no pueden&#xa;ser negativos" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="554" y="1205" width="120" height="70" as="geometry"/>
+        </mxCell>
+        
+        <!-- Guardar datos -->
+        <mxCell id="guardar" value="Almacenar datos&#xa;en arreglos paralelos" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="334" y="1330" width="160" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Incrementar contador -->
+        <mxCell id="increment" value="totalProductos++" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="344" y="1430" width="140" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Mensaje éxito -->
+        <mxCell id="msg-exito" value="Mensaje:&#xa;Producto agregado&#xa;exitosamente" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="334" y="1520" width="160" height="70" as="geometry"/>
+        </mxCell>
+        
+        <!-- FIN -->
+        <mxCell id="fin-ing" value="RETORNAR" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="354" y="1630" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Conectores -->
+        <mxCell edge="1" parent="1" source="ini-ing" target="dec-limite"/>
+        <mxCell value="NO" edge="1" parent="1" source="dec-limite" target="msg-limite"/>
+        <mxCell edge="1" parent="1" source="msg-limite" target="ret-limite"/>
+        <mxCell value="SÍ" edge="1" parent="1" source="dec-limite" target="pedir-nom"/>
+        <mxCell edge="1" parent="1" source="pedir-nom" target="val-nom"/>
+        <mxCell edge="1" parent="1" source="val-nom" target="dec-num"/>
+        <mxCell value="SÍ" edge="1" parent="1" source="dec-num" target="err-nom"/>
+        <mxCell edge="1" parent="1" source="err-nom" target="pedir-nom">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="614" y="310"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell value="NO" edge="1" parent="1" source="dec-num" target="pedir-cant"/>
+        <mxCell edge="1" parent="1" source="pedir-cant" target="dec-cant"/>
+        <mxCell value="NO" edge="1" parent="1" source="dec-cant" target="err-cant"/>
+        <mxCell edge="1" parent="1" source="err-cant" target="pedir-cant">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="614" y="640"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell value="SÍ" edge="1" parent="1" source="dec-cant" target="pedir-tiempo"/>
+        <mxCell edge="1" parent="1" source="pedir-tiempo" target="dec-tiempo"/>
+        <mxCell value="NO" edge="1" parent="1" source="dec-tiempo" target="err-tiempo"/>
+        <mxCell edge="1" parent="1" source="err-tiempo" target="pedir-tiempo">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="614" y="880"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell value="SÍ" edge="1" parent="1" source="dec-tiempo" target="pedir-rec"/>
+        <mxCell edge="1" parent="1" source="pedir-rec" target="dec-rec"/>
+        <mxCell value="NO" edge="1" parent="1" source="dec-rec" target="err-rec"/>
+        <mxCell edge="1" parent="1" source="err-rec" target="pedir-rec">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="614" y="1120"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell value="SÍ" edge="1" parent="1" source="dec-rec" target="guardar"/>
+        <mxCell edge="1" parent="1" source="guardar" target="increment"/>
+        <mxCell edge="1" parent="1" source="increment" target="msg-exito"/>
+        <mxCell edge="1" parent="1" source="msg-exito" target="fin-ing"/>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+  
+  <diagram id="flujo-buscar" name="Buscar Producto">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- INICIO Buscar -->
+        <mxCell id="ini-bus" value="INICIO&#xa;buscarProducto(nombre)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="334" y="40" width="180" height="70" as="geometry"/>
+        </mxCell>
+        
+        <!-- Inicializar i -->
+        <mxCell id="init-i" value="i = 0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="364" y="150" width="120" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Decisión i < total -->
+        <mxCell id="dec-i" value="¿i &lt;&#xa;totalProductos?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="349" y="240" width="150" height="100" as="geometry"/>
+        </mxCell>
+        
+        <!-- Retornar -1 -->
+        <mxCell id="ret-no" value="RETORNAR -1&#xa;(no encontrado)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="574" y="255" width="140" height="70" as="geometry"/>
+        </mxCell>
+        
+        <!-- Inicializar j y encontrado -->
+        <mxCell id="init-j" value="j = 0&#xa;encontrado = 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="354" y="380" width="140" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Decisión comparar caracteres -->
+        <mxCell id="dec-char" value="¿nombre[j] != '\0'&#xa;O&#xa;nombres[i][j] != '\0'?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="319" y="480" width="210" height="120" as="geometry"/>
+        </mxCell>
+        
+        <!-- Decisión iguales -->
+        <mxCell id="dec-igual" value="¿nombre[j]&#xa;==&#xa;nombres[i][j]?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="334" y="650" width="180" height="110" as="geometry"/>
+        </mxCell>
+        
+        <!-- Encontrado = 0 -->
+        <mxCell id="enc-false" value="encontrado = 0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="574" y="675" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Break -->
+        <mxCell id="break-loop" value="Salir del&#xa;bucle interno" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="574" y="775" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Incrementar j -->
+        <mxCell id="inc-j" value="j++" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="374" y="800" width="100" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Decisión encontrado -->
+        <mxCell id="dec-enc" value="¿encontrado&#xa;== 1?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="124" y="490" width="150" height="100" as="geometry"/>
+        </mxCell>
+        
+        <!-- Retornar i -->
+        <mxCell id="ret-i" value="RETORNAR i" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="139" y="630" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Incrementar i -->
+        <mxCell id="inc-i" value="i++" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="149" y="730" width="100" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Conectores -->
+        <mxCell edge="1" parent="1" source="ini-bus" target="init-i"/>
+        <mxCell edge="1" parent="1" source="init-i" target="dec-i"/>
+        <mxCell value="NO" edge="1" parent="1" source="dec-i" target="ret-no"/>
+        <mxCell value="SÍ" edge="1" parent="1" source="dec-i" target="init-j"/>
+        <mxCell edge="1" parent="1" source="init-j" target="dec-char"/>
+        <mxCell value="SÍ" edge="1" parent="1" source="dec-char" target="dec-igual"/>
+        <mxCell value="NO" edge="1" parent="1" source="dec-igual" target="enc-false"/>
+        <mxCell edge="1" parent="1" source="enc-false" target="break-loop"/>
+        <mxCell value="SÍ" edge="1" parent="1" source="dec-igual" target="inc-j"/>
+        <mxCell edge="1" parent="1" source="inc-j" target="dec-char">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="820"/>
+              <mxPoint x="290" y="540"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell value="NO" edge="1" parent="1" source="dec-char" target="dec-enc"/>
+        <mxCell value="SÍ" edge="1" parent="1" source="dec-enc" target="ret-i"/>
+        <mxCell value="NO" edge="1" parent="1" source="dec-enc" target="inc-i"/>
+        <mxCell edge="1" parent="1" source="inc-i" target="dec-i">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="199" y="290"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell edge="1" parent="1" source="break-loop" target="dec-enc">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="634" y="540"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+  
+  <diagram id="flujo-calcular" name="Calcular Producción">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- INICIO Calcular -->
+        <mxCell id="ini-calc" value="INICIO&#xa;calcularProduccion()" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="334" y="40" width="180" height="70" as="geometry"/>
+        </mxCell>
+        
+        <!-- Inicializar variables -->
+        <mxCell id="init-vars" value="tiempoTotal = 0&#xa;recursosTotal = 0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="334" y="150" width="180" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Inicializar i -->
+        <mxCell id="init-i-calc" value="i = 0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="364" y="250" width="120" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Decisión for loop -->
+        <mxCell id="dec-for" value="¿i &lt;&#xa;totalProductos?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="349" y="340" width="150" height="100" as="geometry"/>
+        </mxCell>
+        
+        <!-- Calcular sumas -->
+        <mxCell id="calc-sum" value="tiempoTotal +=&#xa;cantidades[i] * tiempoUnitario[i]&#xa;&#xa;recursosTotal +=&#xa;cantidades[i] * recursosUnitarios[i]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="304" y="480" width="240" height="100" as="geometry"/>
+        </mxCell>
+        
+        <!-- Incrementar i -->
+        <mxCell id="inc-i-calc" value="i++" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="374" y="620" width="100" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Mostrar resultados -->
+        <mxCell id="mostrar-res" value="Mostrar:&#xa;- Tiempo total&#xa;- Recursos totales" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="324" y="480" width="180" height="80" as="geometry"/>
+        </mxCell>
+        
+        <!-- Mostrar detalle -->
+        <mxCell id="mostrar-det" value="Mostrar detalle&#xa;por producto" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="324" y="600" width="180" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Pedir tiempo disponible -->
+        <mxCell id="pedir-tdisp" value="Solicitar tiempo&#xa;disponible" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="324" y="700" width="180" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Decisión tiempo válido -->
+        <mxCell id="dec-tvalid" value="¿tiempo&#xa;disponible&#xa;&gt;= 0?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="339" y="800" width="150" height="100" as="geometry"/>
+        </mxCell>
+        
+        <!-- Error tiempo -->
+        <mxCell id="err-tdisp" value="ERROR:&#xa;Tiempo no puede&#xa;ser negativo" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="554" y="815" width="120" height="70" as="geometry"/>
+        </mxCell>
+        
+        <!-- Pedir recursos disponibles -->
+        <mxCell id="pedir-rdisp" value="Solicitar recursos&#xa;disponibles" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="324" y="940" width="180" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Decisión recursos válidos -->
+        <mxCell id="dec-rvalid" value="¿recursos&#xa;disponibles&#xa;&gt;= 0?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="339" y="1040" width="150" height="100" as="geometry"/>
+        </mxCell>
+        
+        <!-- Error recursos -->
+        <mxCell id="err-rdisp" value="ERROR:&#xa;Recursos no pueden&#xa;ser negativos" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="554" y="1055" width="120" height="70" as="geometry"/>
+        </mxCell>
+        
+        <!-- Decisión puede cumplir -->
+        <mxCell id="dec-cumplir" value="¿tiempoTotal &lt;= tDisp&#xa;Y&#xa;recursosTotal &lt;= rDisp?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="309" y="1180" width="210" height="120" as="geometry"/>
+        </mxCell>
+        
+        <!-- Puede cumplir -->
+        <mxCell id="puede-si" value="Mensaje:&#xa;✓ PUEDE CUMPLIR&#xa;&#xa;Mostrar sobrantes" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="129" y="1345" width="160" height="80" as="geometry"/>
+        </mxCell>
+        
+        <!-- No puede cumplir -->
+        <mxCell id="puede-no" value="Mensaje:&#xa;✗ NO PUEDE CUMPLIR&#xa;&#xa;Mostrar faltantes" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="549" y="1345" width="160" height="80" as="geometry"/>
+        </mxCell>
+        
+        <!-- FIN -->
+        <mxCell id="fin-calc" value="RETORNAR" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="354" y="1465" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Conectores -->
+        <mxCell edge="1" parent="1" source="ini-calc" target="init-vars"/>
+        <mxCell edge="1" parent="1" source="init-vars" target="init-i-calc"/>
+        <mxCell edge="1" parent="1" source="init-i-calc" target="dec-for"/>
+        <mxCell value="SÍ" edge="1" parent="1" source="dec-for" target="calc-sum"/>
+        <mxCell edge="1" parent="1" source="calc-sum" target="inc-i-calc"/>
+        <mxCell edge="1" parent="1" source="inc-i-calc" target="dec-for">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="640"/>
+              <mxPoint x="280" y="390"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell value="NO" edge="1" parent="1" source="dec-for" target="mostrar-res">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="390"/>
+              <mxPoint x="560" y="520"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell edge="1" parent="1" source="mostrar-res" target="mostrar-det"/>
+        <mxCell edge="1" parent="1" source="mostrar-det" target="pedir-tdisp"/>
+        <mxCell edge="1" parent="1" source="pedir-tdisp" target="dec-tvalid"/>
+        <mxCell value="NO" edge="1" parent="1" source="dec-tvalid" target="err-tdisp"/>
+        <mxCell edge="1" parent="1" source="err-tdisp" target="pedir-tdisp">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="614" y="730"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell value="SÍ" edge="1" parent="1" source="dec-tvalid" target="pedir-rdisp"/>
+        <mxCell edge="1" parent="1" source="pedir-rdisp" target="dec-rvalid"/>
+        <mxCell value="NO" edge="1" parent="1" source="dec-rvalid" target="err-rdisp"/>
+        <mxCell edge="1" parent="1" source="err-rdisp" target="pedir-rdisp">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="614" y="970"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell value="SÍ" edge="1" parent="1" source="dec-rvalid" target="dec-cumplir"/>
+        <mxCell value="SÍ" edge="1" parent="1" source="dec-cumplir" target="puede-si"/>
+        <mxCell value="NO" edge="1" parent="1" source="dec-cumplir" target="puede-no"/>
+        <mxCell edge="1" parent="1" source="puede-si" target="fin-calc">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="209" y="1495"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell edge="1" parent="1" source="puede-no" target="fin-calc">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="629" y="1495"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+  
+  <diagram id="flujo-eliminar" name="Eliminar Producto">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- INICIO Eliminar -->
+        <mxCell id="ini-elim" value="INICIO&#xa;eliminarProducto()" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="334" y="40" width="180" height="70" as="geometry"/>
+        </mxCell>
+        
+        <!-- Decisión hay productos -->
+        <mxCell id="dec-hay" value="¿totalProductos&#xa;== 0?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="349" y="150" width="150" height="100" as="geometry"/>
+        </mxCell>
+        
+        <!-- Mensaje no hay -->
+        <mxCell id="msg-nohay" value="Mensaje:&#xa;No hay productos" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="564" y="170" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Retornar -->
+        <mxCell id="ret-nohay" value="RETORNAR" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="564" y="270" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Solicitar nombre -->
+        <mxCell id="pedir-nombre" value="Solicitar nombre&#xa;del producto" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="324" y="290" width="180" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Buscar -->
+        <mxCell id="buscar" value="indice = buscarProducto(nombre)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="304" y="390" width="220" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Decisión encontrado -->
+        <mxCell id="dec-found" value="¿indice&#xa;== -1?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="349" y="480" width="150" height="100" as="geometry"/>
+        </mxCell>
+        
+        <!-- No encontrado -->
+        <mxCell id="msg-nofound" value="Mensaje:&#xa;Producto no&#xa;encontrado" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="564" y="495" width="120" height="70" as="geometry"/>
+        </mxCell>
+        
+        <!-- Retornar no encontrado -->
+        <mxCell id="ret-nofound" value="RETORNAR" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="564" y="605" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Mostrar producto -->
+        <mxCell id="mostrar-prod" value="Mostrar datos&#xa;del producto encontrado" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="314" y="620" width="200" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Solicitar confirmación -->
+        <mxCell id="pedir-conf" value="¿Está seguro?&#xa;(1=Sí, 0=No)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="324" y="720" width="180" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Decisión confirmación -->
+        <mxCell id="dec-conf" value="¿confirmacion&#xa;!= 1?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="349" y="820" width="150" height="100" as="geometry"/>
+        </mxCell>
+        
+        <!-- Cancelar -->
+        <mxCell id="msg-cancel" value="Mensaje:&#xa;Operación cancelada" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="564" y="840" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Retornar cancelar -->
+        <mxCell id="ret-cancel" value="RETORNAR" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="564" y="940" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Inicializar i desplazamiento -->
+        <mxCell id="init-i-desp" value="i = indice" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="364" y="960" width="120" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Decisión for desplazamiento -->
+        <mxCell id="dec-desp" value="¿i &lt;&#xa;totalProductos - 1?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="349" y="1050" width="150" height="100" as="geometry"/>
+        </mxCell>
+        
+        <!-- Desplazar elementos -->
+        <mxCell id="desplazar" value="nombres[i] = nombres[i+1]&#xa;cantidades[i] = cantidades[i+1]&#xa;tiempoUnitario[i] = tiempoUnitario[i+1]&#xa;recursosUnitarios[i] = recursosUnitarios[i+1]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="264" y="1190" width="310" height="90" as="geometry"/>
+        </mxCell>
+        
+        <!-- Incrementar i desplazamiento -->
+        <mxCell id="inc-i-desp" value="i++" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="374" y="1320" width="100" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Decrementar total -->
+        <mxCell id="dec-total" value="totalProductos--" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="344" y="1190" width="140" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Mensaje éxito -->
+        <mxCell id="msg-exito-elim" value="Mensaje:&#xa;Producto eliminado&#xa;exitosamente" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="334" y="1280" width="160" height="70" as="geometry"/>
+        </mxCell>
+        
+        <!-- FIN -->
+        <mxCell id="fin-elim" value="RETORNAR" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="354" y="1390" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Conectores -->
+        <mxCell edge="1" parent="1" source="ini-elim" target="dec-hay"/>
+        <mxCell value="SÍ" edge="1" parent="1" source="dec-hay" target="msg-nohay"/>
+        <mxCell edge="1" parent="1" source="msg-nohay" target="ret-nohay"/>
+        <mxCell value="NO" edge="1" parent="1" source="dec-hay" target="pedir-nombre"/>
+        <mxCell edge="1" parent="1" source="pedir-nombre" target="buscar"/>
+        <mxCell edge="1" parent="1" source="buscar" target="dec-found"/>
+        <mxCell value="SÍ" edge="1" parent="1" source="dec-found" target="msg-nofound"/>
+        <mxCell edge="1" parent="1" source="msg-nofound" target="ret-nofound"/>
+        <mxCell value="NO" edge="1" parent="1" source="dec-found" target="mostrar-prod"/>
+        <mxCell edge="1" parent="1" source="mostrar-prod" target="pedir-conf"/>
+        <mxCell edge="1" parent="1" source="pedir-conf" target="dec-conf"/>
+        <mxCell value="SÍ" edge="1" parent="1" source="dec-conf" target="msg-cancel"/>
+        <mxCell edge="1" parent="1" source="msg-cancel" target="ret-cancel"/>
+        <mxCell value="NO" edge="1" parent="1" source="dec-conf" target="init-i-desp"/>
+        <mxCell edge="1" parent="1" source="init-i-desp" target="dec-desp"/>
+        <mxCell value="SÍ" edge="1" parent="1" source="dec-desp" target="desplazar"/>
+        <mxCell edge="1" parent="1" source="desplazar" target="inc-i-desp"/>
+        <mxCell edge="1" parent="1" source="inc-i-desp" target="dec-desp">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="1340"/>
+              <mxPoint x="270" y="1100"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell value="NO" edge="1" parent="1" source="dec-desp" target="dec-total">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="1100"/>
+              <mxPoint x="560" y="1215"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell edge="1" parent="1" source="dec-total" target="msg-exito-elim"/>
+        <mxCell edge="1" parent="1" source="msg-exito-elim" target="fin-elim"/>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+  
+</mxfile>
