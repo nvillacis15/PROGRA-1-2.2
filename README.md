@@ -3,7 +3,7 @@
 
 #define MAX 50
 
-// Arreglos globales SIN PUNTEROS
+
 char nombres[MAX][30];
 int cantidades[MAX];
 float precios[MAX];
@@ -55,6 +55,7 @@ void leerTexto(const char *mensaje, char destino[]) {
 
     while ((caracter = getchar()) != '\n');
 }
+
 
 
 void agregarProducto() {
