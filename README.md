@@ -5,11 +5,10 @@
 #define MAX_PRODUCTOS 50
 #define MAX_NOMBRE 50
 
-// Variables globales para almacenar datos
 char nombres[MAX_PRODUCTOS][MAX_NOMBRE];
 int cantidades[MAX_PRODUCTOS];
-float tiempoUnitario[MAX_PRODUCTOS];  // Tiempo para fabricar 1 unidad
-float recursosUnitarios[MAX_PRODUCTOS]; // Recursos para fabricar 1 unidad
+float tiempoUnitario[MAX_PRODUCTOS];  
+float recursosUnitarios[MAX_PRODUCTOS]; 
 int totalProductos = 0;
 
 // Prototipos de funciones
